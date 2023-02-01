@@ -1,0 +1,1111 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+@font-face {
+    font-family: SofiaPro;
+    src: url(Fonts/Sofia\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: SofiaProLight;
+    src: url(Fonts/sofiapro-light.otf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+.button {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 25px;
+    padding: 15px 50px;
+    background: -o-linear-gradient(165deg, rgba(241,201,190,1) 0%, rgba(207,135,252,1) 100%);
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(207,135,252,1) 100%);
+    color: white;
+    font-family: SofiaPro;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(241,201,190,1)), to(rgba(207,135,252,1)));
+    background: -o-linear-gradient(left, rgba(241,201,190,1) 0%, rgba(207,135,252,1) 100%);
+    background: linear-gradient(90deg, rgba(241,201,190,1) 0%, rgba(207,135,252,1) 100%);
+}
+
+
+/*=======================================
+==============nav-contanier(Start)=======
+========================================*/
+
+@font-face {
+    font-family: CircularStd;
+    src: url(Fonts/CircularStd-BookItalic.ttf);
+}
+
+.menu-contanier {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fa-bars {
+    font-size: 25px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: all 100ms;
+}
+
+.fa-bars-open {
+    color: rgb(0, 89, 255);
+    padding: 6px 10px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.562);
+}
+
+.aside-nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.nav-btn {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.aside-nav-bar > div > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family:CircularStd;
+    font-weight: lighter;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+    background-color: rgba(59, 30, 128, 0.76);
+}
+
+.nav-btn div:nth-child(1) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 100ms;
+}
+
+.nav-btn div:nth-child(2) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 200ms;
+}
+
+.nav-btn div:nth-child(3) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 300ms;
+}
+
+.nav-btn div:nth-child(4) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 400ms;
+}
+
+.nav-btn div:nth-child(5) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 5000ms;
+}
+
+.nav-btn div:nth-child(6) {
+    animation: animate 300ms forwards ease-in-out;
+    animation-delay: 600ms;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-90deg);
+    }
+
+    50% {
+        transform: rotateX(20deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.nav-contanier {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: absolute;
+    top: 50px;
+    right: 0;
+}
+
+.nav-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    align-items: flex-start;
+    gap: 2.5vw;
+}
+
+.why-us {
+    white-space: nowrap;
+}
+
+#services-btn {
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: white;
+    transform: translate(0, -20%);
+}
+
+
+.nav-btns > div > a{
+    color: white;
+    font-family: SofiaPro;
+}
+
+#services-btn > a {
+    color: #da9ce8;
+}
+
+@media (max-width:1150px) {
+    .nav-btns > div > a{
+        color: black;
+    }
+}
+
+@media (max-width:850px) {
+    .nav-btns > div > a{
+        display: none;
+        pointer-events: none;
+    }
+    #services-btn {
+        padding: 0;
+    }
+    .menu-contanier {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+
+/*=======================================
+==============nav-contanier(End)=======
+========================================*/
+
+
+/*=======================================
+==============contanier-1(Start)=======
+========================================*/
+
+
+.contanier-1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/Background-1.png);
+    transition: all 2s;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+@media (max-width:800px) {
+    .contanier-1 {
+        background-size: 200% 100%;
+    }
+}
+
+@media (max-width:415px) {
+    .contanier-1 {
+        background-size: 300% 100%;
+        background-position: -550px 0;
+    }
+}
+
+.contanier-texts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.5vh;
+    margin-left: 15vw;
+}
+
+
+.contanier-1-header {
+    color: black;
+    font-family: SofiaPro;
+    font-weight: bold;
+    font-size: clamp(25px,1.5vw,50px);
+}
+
+.contanier-1-header-texts {
+    color: black;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    font-size: clamp(15px,1.2vw,30px);
+}
+
+.contanier-1-description {
+    color: black;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+}
+
+
+/*=======================================
+==============contanier-1(End)=======
+========================================*/
+
+
+/*=======================================
+==============contanier-2(Start)=======
+========================================*/
+
+
+.contanier-2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: url(Images/Shape\ 1\ copy\ 2.png);
+    background-position: 0% 25%;
+    background-repeat: no-repeat;
+}
+
+.contanier-2-heading {
+    margin-top: 100px;
+    font-family: sans-serif;
+    color: black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.contanier-2-heading-description {
+    color: black;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2.5vh;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    background-color: white;
+    padding: 50px 25px;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(51, 51, 51, 0.205);
+            box-shadow: 0px 0px 20px 1px rgba(51, 51, 51, 0.205);
+}
+
+.contanier-2-card-1 {
+    border-bottom-left-radius: 70px;
+}
+
+.contanier-2-card-3 {
+    border-bottom-right-radius: 70px;
+}
+
+.contanier-2-cards {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    gap: 25px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+}
+
+.heading {
+    color: #da9ce8;
+    font-family: sans-serif;
+}
+
+.description {
+    text-align: center;
+    color: #919ab4;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+}
+
+/*=======================================
+==============contanier-2(End)=======
+========================================*/
+
+
+/*=======================================
+==============contanier-3(Start)=======
+========================================*/
+
+.contanier-3 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contanier-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
+
+.contanier-3-video-and-texts-contanier {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.video-contanier {
+    position: relative;
+    border-bottom-left-radius: 70px;
+}    
+    .video-contanier::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: -o-linear-gradient(109deg, #f6d3b8 0%, #e5afce 76% );
+        background: linear-gradient(-19deg, #f6d3b8 0%, #e5afce 76% );
+        -webkit-transform: translate3d(35px, 35px, 0) scale(0.94);
+                transform: translate3d(35px, 35px, 0) scale(0.94);
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: var(--opacity,0.7);
+        -webkit-transition: opacity 0.3s;
+        -o-transition: opacity 0.3s;
+        transition: opacity 0.3s;
+        border-radius: inherit;
+    }
+    
+    /* 
+    * Prevents issues when the parent creates a 
+    * stacking context. (For example, using the transform
+    * property )
+    */
+
+
+.video {
+    width: 35vw;
+    min-width: 350px;
+    height: 35vw;
+    min-height: 305px;
+    position: relative;
+}
+
+.video-time-bar {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    display: none;
+    bottom: 0;
+    border-radius: 20px;
+    background-color:rgba(0, 0, 0, 0.144) ;
+}
+
+.bar {
+    width: 0%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: -o-linear-gradient(165deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+    background-image: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+#videoVolume {
+    width: 20%;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    display: none;
+    bottom: 35px;
+    border-radius: 20px;
+    background-color:rgba(0, 0, 0, 0.877) ;
+}
+
+
+#videoVolume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+
+
+
+#videoVolume::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+#videoVolume::-ms-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+#videoVolume::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+#videoVolume::-moz-range-track  {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+#videoVolume::-ms-track  {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+}
+
+
+
+
+.button-conatanier {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 10;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.playbutton {
+    width: 15px;
+    height: 15px;
+    background-image: -o-linear-gradient(165deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+    background-image: linear-gradient(-75deg, rgba(241,201,190,1) 0%, rgba(229,175,206,1) 100%);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    border-width: 15px 0 15px 15px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgba(241,201,190,1);
+    z-index: 10;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+    opacity: 100%;
+}
+
+
+.contanier-3-text-heading {
+    color: black;
+    font-family: SofiaPro;
+    font-weight: bold;
+}
+
+.contanier-3-text-description,.contanier-3-text-footer-description {
+    color: #000000;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+}
+
+.contanier-3-text-description {
+    margin: 3vw 0px 1.5vw 0px;
+}
+
+.contanier-3-text-footer-description {
+    margin-bottom: 25px;
+}
+
+
+
+.contanier-3-cards {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+.contanier-3-cards > div {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+
+/*=======================================
+==============contanier-3(End)=======
+========================================*/
+
+
+
+/*=======================================
+==============contanier-4(Start)=======
+========================================*/
+
+
+.contanier-4 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin-bottom: 200px;
+}
+
+
+.contanier-4-text-heading {
+    color: black;
+    font-family: SofiaPro;
+    font-weight: bold;
+}
+
+.contanier-4-text-description {
+    color: #000000;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    line-height: 40px;
+    margin: 3vw 0px 1.5vw 0px;
+}
+
+
+
+.contanier-4-cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.contanier-4-shape-1 {
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+}
+
+.contanier-4-shape-2 {
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+}
+
+
+/*=======================================
+==============contanier-4(End)=======
+========================================*/
+
+
+/*=======================================
+==============contanier-5(Start)=======
+========================================*/
+
+
+.contanier-5 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 3vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+
+.contanier-5-shape-2 {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    z-index: -1;
+}
+
+.contanier-5-loaction > img {
+    width: 30vw;
+    min-width: 250px;
+    aspect-ratio: 1 / 1;
+}
+
+.contanier-5-loaction {
+    margin-top: 200px;
+}
+
+
+.contanier-5-contact-info-heading{
+    color: black;
+    font-family: SofiaPro;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.contanier-5-contact-info-description ,.contanier-5-contact-info {
+    margin-left: 20px;
+}
+
+
+.contanier-5-contact-info > div > p , .contanier-5-contact-info-description {
+    color: #000000;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    line-height: 40px;
+}
+
+.contanier-5-contact-info > div > img {
+    width: 13px;
+    height: 13px;
+}
+
+.contact-number,.maps-and-flags,.clock-cricular,.email-address{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10px 0px;
+    gap: 10px;
+}
+
+
+/*=======================================
+==============contanier-5(End)=======
+========================================*/
+
+/*=======================================
+==============contanier-6(Start)=======
+========================================*/
+
+
+.contanier-6 {
+    width: 100%;
+    height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.contanier-6-shape-6 {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    z-index: -1;
+}
+
+.contanier-6-texts-and-email-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.contanier-6-heading {
+    font-size: 30px;
+    font-family: SofiaPro;
+    font-weight: bold;
+    color: #d85db0;
+    background-image: -webkit-linear-gradient(315deg, #d85db0 0%, #f1c9be 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  
+          
+}
+
+.contanier-6-description {
+    color: #9da1ad;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    line-height: 10px;
+    text-align: center;
+}
+
+
+.contanier-6-eamil-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.contanier-6-eamil-section > img {
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    top: 35%;
+    left: 35px;
+    z-index: 2;
+}
+
+.contanier-6-eamil-section > input:nth-child(2) {
+    border: none;
+    padding: 10px 35px;
+    font-size: 15px;
+    background-color: #f2f2f2;
+    border-radius: 25px;
+    -webkit-transform: translateX(25px);
+        -ms-transform: translateX(25px);
+            transform: translateX(25px);
+    outline: none;
+    width: 20vw;
+    min-width: 200px;
+}
+
+.contanier-6-eamil-section > input:nth-child(3) {
+    border: none;
+    padding: 10px 35px;
+    font-size: 15px;
+    -webkit-transform: translateX(-25px);
+        -ms-transform: translateX(-25px);
+            transform: translateX(-25px);
+}
+
+
+
+/*=======================================
+==============contanier-6(End)=======
+========================================*/
+
+/*=======================================
+==============contanier-7(Start)=======
+========================================*/
+
+
+.contanier-7 {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-image: url(Images/Footer-background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.progress-bar {
+    width: 58.4375vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 25px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5vw;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(241,201,190,1)), to(rgba(216,170,233,1)));
+    background: -o-linear-gradient(bottom, rgba(241,201,190,1) 0%, rgba(216,170,233,1) 100%);
+    background: linear-gradient(0deg, rgba(241,201,190,1) 0%, rgba(216,170,233,1) 100%);
+}
+
+.progress-bar > div > h1 {
+    color: #ffffff;
+    font-family: SofiaPro;
+    font-weight: lighter;
+    line-height: 10px;
+    text-align: center;
+}
+
+.progress-bar > div > p {
+    font-size: 15px;
+    font-family: SofiaPro;
+    color: white;
+    margin-top: 15px;
+}
+
+
+.agency-info {
+    margin-top: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.agency-heading-and-description > img {
+    width: 98px;
+    height: 20px;
+}
+
+.agency-heading-and-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+
+.agency-description {
+    color: white;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+    margin: 40px 0px;
+}
+
+.social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 25px;
+}
+
+
+.contanier-7-contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+.contanier-7-contact-info > div > p {
+    color: white;
+    font-family: SofiaProLight;
+    font-weight: lighter;
+}
+
+.hogash-studio {
+    margin-bottom: 25px;
+    margin-top: 50px;
+    font-size: 25px;
+    font-family: SofiaProLight;
+    color: white;
+    font-weight: lighter;
+}
+
+#footer-email {
+    width: 15vw;
+}
+
+/*=======================================
+==============contanier-7(End)=======
+========================================*/
